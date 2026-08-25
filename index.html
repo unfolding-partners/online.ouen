@@ -37,7 +37,7 @@
     --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  .nb { display: inline-block; } /* 文節単位の折り返し用 */
+  .nb { display: inline-block; white-space: nowrap; } /* 文節単位の折り返し用 */
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--sans);
@@ -386,6 +386,10 @@
     .profile-photo-ph { width: 224px; height: 300px; margin: 0 auto; }
     .flow-step { width: 78px; height: 78px; font-size: 13px; }
     .flow-arrow { padding: 0 6px; }
+  }
+
+  @media (max-width: 380px) {
+    .nb { white-space: normal; }
   }
 </style>
 </head>
